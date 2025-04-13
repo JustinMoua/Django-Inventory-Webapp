@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "djangoApp.apps.DjangoappConfig", #including my app in my project, I have to add the reference here to my project's 
+                                      #configuration class founded in infraTie/infraTieSite/djangoApp/apps.py
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -75,7 +77,7 @@ WSGI_APPLICATION = 'infraTieSite.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "infratie_db",
+        "NAME": "DemoProject",
         "USER": "root",
         "PASSWORD": "root",
         "HOST": "127.0.0.1",
