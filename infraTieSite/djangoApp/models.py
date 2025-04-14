@@ -10,7 +10,7 @@ class Inspection(models.Model):
     Attribute_7 = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.id
+        return f"{self.first_name} {self.last_name}"
 
     class Meta:
         db_table = "Inspection"

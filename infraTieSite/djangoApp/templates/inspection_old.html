@@ -1,0 +1,15 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<h1>Inspection list</h1>
+
+<ul>
+    {% comment %} inspection is our table. {% endcomment %}
+    {%for rows in inspection%}
+    <li>
+        SHOW ROWS HERE {% comment %}  {{rows}}:{% if todo.completed%}Completed{%else%}Not Completed{%endif%} {% endcomment %}
+    </li>
+    {%endfor%}
+</ul>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block header %}
+<div>
+    <h3 class="float-md-start mb-0">Justin Moua</h3>
+</div>
+{% endblock %}
+
+{% block main %}
+<table class="table table-bordered table-hover table-sm w-75 mx-auto" >
+    <thead>
+        <tr>
+            <th scope="col">InspectionID</th>
+            <th scope="col">Attribute 1</th>
+            <th scope="col">Attribute 2</th>
+            <th scope="col">Attribute 3</th>
+            <th scope="col">Attribute 4</th>
+            <th scope="col">Attribute 5</th>
+            <th scope="col">Attribute 6</th>
+            <th scope="col">Attribute 7</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for inspection in inspections %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ inspection.Attribute_1 }}</td>
+            <td>{{ inspection.Attribute_2 }}</td>
+            <td>{{ inspection.Attribute_3 }}</td>
+            <td>{{ inspection.Attribute_4 }}</td>
+            <td>{{ inspection.Attribute_5 }}</td>
+            <td>{{ inspection.Attribute_6 }}</td>
+            <td>{{ inspection.Attribute_7 }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
