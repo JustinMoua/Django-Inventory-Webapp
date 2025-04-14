@@ -33,8 +33,9 @@
 <link rel="icon" href="../assets/img/favicons/favicon.ico">
 <meta name="theme-color" content="#712cf9">
 
-
+    
     <style>
+      {% block style%}
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -116,7 +117,9 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+      {%endblock%}
     </style>
+
 
     <!-- Custom styles for this template -->
     <link href="{% static 'cover.css' %}" rel="stylesheet">
