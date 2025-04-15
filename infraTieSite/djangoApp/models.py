@@ -16,8 +16,8 @@ class Inspection(models.Model):
         db_table = "Inspection"
 
 class Condition(models.Model):
-    Inspection = models.ForeignKey(
-        Inspection,
+    Inspection = models.ForeignKey( #foreign key is here. So, there is a column of "inspection_id" that ties in with the inspection table's ids.
+        Inspection,                 #https://docs.djangoproject.com/en/5.2/topics/db/examples/many_to_one/
         on_delete=models.CASCADE
     )
     Attribute_1 = models.CharField(max_length=50)

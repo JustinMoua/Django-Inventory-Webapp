@@ -2,7 +2,7 @@
     "type": "MySQLNotebook",
     "version": "1.0",
     "caption": "DB Notebook",
-    "content": "\\about\nCREATE DATABASE IF NOT EXISTS DemoProject;\nUSE DemoProject;\n\n-- SCHEMAS:\n\n-- Inspection\n    -- id\n    -- Attribute 1\n    -- Attribute 2\n    -- Attribute 3\n    -- Attribute 4\n    -- Attribute 5\n    -- Attribute 6\n    -- Attribute 7\n\n-- Condition\n    -- id\n    -- Attribute 1\n    -- Attribute 2\n    -- Attribute 3\n    -- Attribute 4\n    -- Attribute 5\n    -- Attribute 6\n    -- Attribute 7\n    -- inspection_id\n\nINSERT INTO `DemoProject`.`Inspection` VALUES\n(\n\t1,\n    'Attribute 1 for Inspection 1',\n    'Attribute 2 for Inspection 1',\n    'Attribute 3 for Inspection 1',\n    'Attribute 4 for Inspection 1',\n    'Attribute 5 for Inspection 1',\n    'Attribute 6 for Inspection 1',\n    'Attribute 7 for Inspection 1'\n),\n(\n\t2,\n    'Attribute 1 for Inspection 2',\n    'Attribute 2 for Inspection 2',\n    'Attribute 3 for Inspection 2',\n    'Attribute 4 for Inspection 2',\n    'Attribute 5 for Inspection 2',\n    'Attribute 6 for Inspection 2',\n    'Attribute 7 for Inspection 2'\n),\n(\n\t3,\n    'Attribute 1 for Inspection 3',\n    'Attribute 2 for Inspection 3',\n    'Attribute 3 for Inspection 3',\n    'Attribute 4 for Inspection 3',\n    'Attribute 5 for Inspection 3',\n    'Attribute 6 for Inspection 3',\n    'Attribute 7 for Inspection 3'\n),\n(\n\t4,\n    'Attribute 1 for Inspection 4',\n    'Attribute 2 for Inspection 4',\n    'Attribute 3 for Inspection 4',\n    'Attribute 4 for Inspection 4',\n    'Attribute 5 for Inspection 4',\n    'Attribute 6 for Inspection 4',\n    'Attribute 7 for Inspection 4'\n),\n(\n\t5,\n    'Attribute 1 for Inspection 5',\n    'Attribute 2 for Inspection 5',\n    'Attribute 3 for Inspection 5',\n    'Attribute 4 for Inspection 5',\n    'Attribute 5 for Inspection 5',\n    'Attribute 6 for Inspection 5',\n    'Attribute 7 for Inspection 5'\n);\n\nINSERT INTO `DemoProject`.`Condition` VALUES\n(\n\t1,\n    'Attribute 1 for Condition 1',\n    'Attribute 2 for Condition 1',\n    'Attribute 3 for Condition 1',\n    'Attribute 4 for Condition 1',\n    'Attribute 5 for Condition 1',\n    'Attribute 6 for Condition 1',\n    'Attribute 7 for Condition 1',\n    1\n),\n(\n\t2,\n    'Attribute 1 for Condition 2',\n    'Attribute 2 for Condition 2',\n    'Attribute 3 for Condition 2',\n    'Attribute 4 for Condition 2',\n    'Attribute 5 for Condition 2',\n    'Attribute 6 for Condition 2',\n    'Attribute 7 for Condition 2',\n    1\n),\n(\n\t3,\n    'Attribute 1 for Condition 3',\n    'Attribute 2 for Condition 3',\n    'Attribute 3 for Condition 3',\n    'Attribute 4 for Condition 3',\n    'Attribute 5 for Condition 3',\n    'Attribute 6 for Condition 3',\n    'Attribute 7 for Condition 3',\n    1\n),\n(\n\t4,\n    'Attribute 1 for Condition 4',\n    'Attribute 2 for Condition 4',\n    'Attribute 3 for Condition 4',\n    'Attribute 4 for Condition 4',\n    'Attribute 5 for Condition 4',\n    'Attribute 6 for Condition 4',\n    'Attribute 7 for Condition 4',\n    2\n),\n(\n\t5,\n    'Attribute 1 for Condition 5',\n    'Attribute 2 for Condition 5',\n    'Attribute 3 for Condition 5',\n    'Attribute 4 for Condition 5',\n    'Attribute 5 for Condition 5',\n    'Attribute 6 for Condition 5',\n    'Attribute 7 for Condition 5',\n    2\n),\n(\n\t6,\n    'Attribute 1 for Condition 6',\n    'Attribute 2 for Condition 6',\n    'Attribute 3 for Condition 6',\n    'Attribute 4 for Condition 6',\n    'Attribute 5 for Condition 6',\n    'Attribute 6 for Condition 6',\n    'Attribute 7 for Condition 6',\n    2\n),\n(\n\t7,\n    'Attribute 1 for Condition 7',\n    'Attribute 2 for Condition 7',\n    'Attribute 3 for Condition 7',\n    'Attribute 4 for Condition 7',\n    'Attribute 5 for Condition 7',\n    'Attribute 6 for Condition 7',\n    'Attribute 7 for Condition 7',\n    3\n),\n(\n\t8,\n    'Attribute 1 for Condition 8',\n    'Attribute 2 for Condition 8',\n    'Attribute 3 for Condition 8',\n    'Attribute 4 for Condition 8',\n    'Attribute 5 for Condition 8',\n    'Attribute 6 for Condition 8',\n    'Attribute 7 for Condition 8',\n    3\n),\n(\n\t9,\n    'Attribute 1 for Condition 9',\n    'Attribute 2 for Condition 9',\n    'Attribute 3 for Condition 9',\n    'Attribute 4 for Condition 9',\n    'Attribute 5 for Condition 9',\n    'Attribute 6 for Condition 9',\n    'Attribute 7 for Condition 9',\n    3\n),\n(\n\t10,\n    'Attribute 1 for Condition 10',\n    'Attribute 2 for Condition 10',\n    'Attribute 3 for Condition 10',\n    'Attribute 4 for Condition 10',\n    'Attribute 5 for Condition 10',\n    'Attribute 6 for Condition 10',\n    'Attribute 7 for Condition 10',\n    4\n),\n(\n\t11,\n    'Attribute 1 for Condition 11',\n    'Attribute 2 for Condition 11',\n    'Attribute 3 for Condition 11',\n    'Attribute 4 for Condition 11',\n    'Attribute 5 for Condition 11',\n    'Attribute 6 for Condition 11',\n    'Attribute 7 for Condition 11',\n    4\n),\n(\n\t12,\n    'Attribute 1 for Condition 12',\n    'Attribute 2 for Condition 12',\n    'Attribute 3 for Condition 12',\n    'Attribute 4 for Condition 12',\n    'Attribute 5 for Condition 12',\n    'Attribute 6 for Condition 12',\n    'Attribute 7 for Condition 12',\n    4\n),\n(\n\t13,\n    'Attribute 1 for Condition 13',\n    'Attribute 2 for Condition 13',\n    'Attribute 3 for Condition 13',\n    'Attribute 4 for Condition 13',\n    'Attribute 5 for Condition 13',\n    'Attribute 6 for Condition 13',\n    'Attribute 7 for Condition 13',\n    5\n),\n(\n\t14,\n    'Attribute 1 for Condition 14',\n    'Attribute 2 for Condition 14',\n    'Attribute 3 for Condition 14',\n    'Attribute 4 for Condition 14',\n    'Attribute 5 for Condition 14',\n    'Attribute 6 for Condition 14',\n    'Attribute 7 for Condition 14',\n    5\n),\n(\n\t15,\n    'Attribute 1 for Condition 15',\n    'Attribute 2 for Condition 15',\n    'Attribute 3 for Condition 15',\n    'Attribute 4 for Condition 15',\n    'Attribute 5 for Condition 15',\n    'Attribute 6 for Condition 15',\n    'Attribute 7 for Condition 15',\n    5\n);\nSELECT * FROM inspection;\nSELECT * FROM `condition`;\n",
+    "content": "\\about\nCREATE DATABASE IF NOT EXISTS DemoProject;\nUSE DemoProject;\n\n-- SCHEMAS:\n\n-- Inspection\n    -- id\n    -- Attribute 1\n    -- Attribute 2\n    -- Attribute 3\n    -- Attribute 4\n    -- Attribute 5\n    -- Attribute 6\n    -- Attribute 7\n\n-- Condition\n    -- id\n    -- Attribute 1\n    -- Attribute 2\n    -- Attribute 3\n    -- Attribute 4\n    -- Attribute 5\n    -- Attribute 6\n    -- Attribute 7\n    -- inspection_id\n\nINSERT INTO `DemoProject`.`Inspection` VALUES\n(\n\t1,\n    'Attribute 1 for Inspection 1',\n    'Attribute 2 for Inspection 1',\n    'Attribute 3 for Inspection 1',\n    'Attribute 4 for Inspection 1',\n    'Attribute 5 for Inspection 1',\n    'Attribute 6 for Inspection 1',\n    'Attribute 7 for Inspection 1'\n),\n(\n\t2,\n    'Attribute 1 for Inspection 2',\n    'Attribute 2 for Inspection 2',\n    'Attribute 3 for Inspection 2',\n    'Attribute 4 for Inspection 2',\n    'Attribute 5 for Inspection 2',\n    'Attribute 6 for Inspection 2',\n    'Attribute 7 for Inspection 2'\n),\n(\n\t3,\n    'Attribute 1 for Inspection 3',\n    'Attribute 2 for Inspection 3',\n    'Attribute 3 for Inspection 3',\n    'Attribute 4 for Inspection 3',\n    'Attribute 5 for Inspection 3',\n    'Attribute 6 for Inspection 3',\n    'Attribute 7 for Inspection 3'\n),\n(\n\t4,\n    'Attribute 1 for Inspection 4',\n    'Attribute 2 for Inspection 4',\n    'Attribute 3 for Inspection 4',\n    'Attribute 4 for Inspection 4',\n    'Attribute 5 for Inspection 4',\n    'Attribute 6 for Inspection 4',\n    'Attribute 7 for Inspection 4'\n),\n(\n\t5,\n    'Attribute 1 for Inspection 5',\n    'Attribute 2 for Inspection 5',\n    'Attribute 3 for Inspection 5',\n    'Attribute 4 for Inspection 5',\n    'Attribute 5 for Inspection 5',\n    'Attribute 6 for Inspection 5',\n    'Attribute 7 for Inspection 5'\n);\n\nINSERT INTO `DemoProject`.`Condition` VALUES\n(\n\t1,\n    'Attribute 1 for Condition 1',\n    'Attribute 2 for Condition 1',\n    'Attribute 3 for Condition 1',\n    'Attribute 4 for Condition 1',\n    'Attribute 5 for Condition 1',\n    'Attribute 6 for Condition 1',\n    'Attribute 7 for Condition 1',\n    1\n),\n(\n\t2,\n    'Attribute 1 for Condition 2',\n    'Attribute 2 for Condition 2',\n    'Attribute 3 for Condition 2',\n    'Attribute 4 for Condition 2',\n    'Attribute 5 for Condition 2',\n    'Attribute 6 for Condition 2',\n    'Attribute 7 for Condition 2',\n    1\n),\n(\n\t3,\n    'Attribute 1 for Condition 3',\n    'Attribute 2 for Condition 3',\n    'Attribute 3 for Condition 3',\n    'Attribute 4 for Condition 3',\n    'Attribute 5 for Condition 3',\n    'Attribute 6 for Condition 3',\n    'Attribute 7 for Condition 3',\n    1\n),\n(\n\t4,\n    'Attribute 1 for Condition 4',\n    'Attribute 2 for Condition 4',\n    'Attribute 3 for Condition 4',\n    'Attribute 4 for Condition 4',\n    'Attribute 5 for Condition 4',\n    'Attribute 6 for Condition 4',\n    'Attribute 7 for Condition 4',\n    2\n),\n(\n\t5,\n    'Attribute 1 for Condition 5',\n    'Attribute 2 for Condition 5',\n    'Attribute 3 for Condition 5',\n    'Attribute 4 for Condition 5',\n    'Attribute 5 for Condition 5',\n    'Attribute 6 for Condition 5',\n    'Attribute 7 for Condition 5',\n    2\n),\n(\n\t6,\n    'Attribute 1 for Condition 6',\n    'Attribute 2 for Condition 6',\n    'Attribute 3 for Condition 6',\n    'Attribute 4 for Condition 6',\n    'Attribute 5 for Condition 6',\n    'Attribute 6 for Condition 6',\n    'Attribute 7 for Condition 6',\n    2\n),\n(\n\t7,\n    'Attribute 1 for Condition 7',\n    'Attribute 2 for Condition 7',\n    'Attribute 3 for Condition 7',\n    'Attribute 4 for Condition 7',\n    'Attribute 5 for Condition 7',\n    'Attribute 6 for Condition 7',\n    'Attribute 7 for Condition 7',\n    3\n),\n(\n\t8,\n    'Attribute 1 for Condition 8',\n    'Attribute 2 for Condition 8',\n    'Attribute 3 for Condition 8',\n    'Attribute 4 for Condition 8',\n    'Attribute 5 for Condition 8',\n    'Attribute 6 for Condition 8',\n    'Attribute 7 for Condition 8',\n    3\n),\n(\n\t9,\n    'Attribute 1 for Condition 9',\n    'Attribute 2 for Condition 9',\n    'Attribute 3 for Condition 9',\n    'Attribute 4 for Condition 9',\n    'Attribute 5 for Condition 9',\n    'Attribute 6 for Condition 9',\n    'Attribute 7 for Condition 9',\n    3\n),\n(\n\t10,\n    'Attribute 1 for Condition 10',\n    'Attribute 2 for Condition 10',\n    'Attribute 3 for Condition 10',\n    'Attribute 4 for Condition 10',\n    'Attribute 5 for Condition 10',\n    'Attribute 6 for Condition 10',\n    'Attribute 7 for Condition 10',\n    4\n),\n(\n\t11,\n    'Attribute 1 for Condition 11',\n    'Attribute 2 for Condition 11',\n    'Attribute 3 for Condition 11',\n    'Attribute 4 for Condition 11',\n    'Attribute 5 for Condition 11',\n    'Attribute 6 for Condition 11',\n    'Attribute 7 for Condition 11',\n    4\n),\n(\n\t12,\n    'Attribute 1 for Condition 12',\n    'Attribute 2 for Condition 12',\n    'Attribute 3 for Condition 12',\n    'Attribute 4 for Condition 12',\n    'Attribute 5 for Condition 12',\n    'Attribute 6 for Condition 12',\n    'Attribute 7 for Condition 12',\n    4\n),\n(\n\t13,\n    'Attribute 1 for Condition 13',\n    'Attribute 2 for Condition 13',\n    'Attribute 3 for Condition 13',\n    'Attribute 4 for Condition 13',\n    'Attribute 5 for Condition 13',\n    'Attribute 6 for Condition 13',\n    'Attribute 7 for Condition 13',\n    5\n),\n(\n\t14,\n    'Attribute 1 for Condition 14',\n    'Attribute 2 for Condition 14',\n    'Attribute 3 for Condition 14',\n    'Attribute 4 for Condition 14',\n    'Attribute 5 for Condition 14',\n    'Attribute 6 for Condition 14',\n    'Attribute 7 for Condition 14',\n    5\n),\n(\n\t15,\n    'Attribute 1 for Condition 15',\n    'Attribute 2 for Condition 15',\n    'Attribute 3 for Condition 15',\n    'Attribute 4 for Condition 15',\n    'Attribute 5 for Condition 15',\n    'Attribute 6 for Condition 15',\n    'Attribute 7 for Condition 15',\n    5\n);\nSELECT * FROM inspection;\nSELECT * FROM `condition`;\nUSE DemoProject;\nSELECT * FROM `condition` WHERE Inspection_id = 1;\n",
     "options": {
         "tabSize": 4,
         "indentSize": 4,
@@ -15,11 +15,11 @@
             {
                 "inSelectionMode": false,
                 "selectionStart": {
-                    "lineNumber": 248,
+                    "lineNumber": 250,
                     "column": 1
                 },
                 "position": {
-                    "lineNumber": 248,
+                    "lineNumber": 250,
                     "column": 1
                 }
             }
@@ -27,10 +27,10 @@
         "viewState": {
             "scrollLeft": 0,
             "firstPosition": {
-                "lineNumber": 246,
+                "lineNumber": 247,
                 "column": 1
             },
-            "firstPositionDeltaTop": -13
+            "firstPositionDeltaTop": 165
         },
         "contributionsState": {
             "editor.contrib.folding": {},
@@ -206,7 +206,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "2ecaae1b-52f0-44cb-a910-e156920a709a"
+                        "76bdd7c1-4db8-404a-c719-563898fc4d9d"
                     ]
                 },
                 "currentHeight": 207,
@@ -225,8 +225,8 @@
             },
             "data": [
                 {
-                    "tabId": "7025eff2-5436-46e4-c4ae-0d973e591bc8",
-                    "resultId": "2ecaae1b-52f0-44cb-a910-e156920a709a",
+                    "tabId": "a27dde1b-237c-4830-b4a6-716f4c8d05c5",
+                    "resultId": "76bdd7c1-4db8-404a-c719-563898fc4d9d",
                     "rows": [
                         {
                             "0": 1,
@@ -448,7 +448,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "91bf3c1f-38c5-4102-9d3d-127ece46335a"
+                        "37293a93-8f49-4287-8c4d-559075f7c25d"
                     ]
                 },
                 "currentHeight": 352,
@@ -467,8 +467,8 @@
             },
             "data": [
                 {
-                    "tabId": "7025eff2-5436-46e4-c4ae-0d973e591bc8",
-                    "resultId": "91bf3c1f-38c5-4102-9d3d-127ece46335a",
+                    "tabId": "a27dde1b-237c-4830-b4a6-716f4c8d05c5",
+                    "resultId": "37293a93-8f49-4287-8c4d-559075f7c25d",
                     "rows": [
                         {
                             "0": 1,
@@ -821,6 +821,292 @@
             "state": {
                 "start": 248,
                 "end": 248,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "bb11918e-181d-479a-d84b-131b8c62a132",
+                            "content": "OK, 0 records retrieved in 0.564ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 16
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 16,
+                            "length": 0
+                        },
+                        "contentStart": 16,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 249,
+                "end": 249,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "58138471-1659-45c8-ea12-660c70977d7c"
+                    ]
+                },
+                "currentHeight": 158.390625,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 50
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "a27dde1b-237c-4830-b4a6-716f4c8d05c5",
+                    "resultId": "58138471-1659-45c8-ea12-660c70977d7c",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Attribute 1 for Condition 1",
+                            "2": "Attribute 2 for Condition 1",
+                            "3": "Attribute 3 for Condition 1",
+                            "4": "Attribute 4 for Condition 1",
+                            "5": "Attribute 5 for Condition 1",
+                            "6": "Attribute 6 for Condition 1",
+                            "7": "Attribute 7 for Condition 1",
+                            "8": 1
+                        },
+                        {
+                            "0": 2,
+                            "1": "Attribute 1 for Condition 2",
+                            "2": "Attribute 2 for Condition 2",
+                            "3": "Attribute 3 for Condition 2",
+                            "4": "Attribute 4 for Condition 2",
+                            "5": "Attribute 5 for Condition 2",
+                            "6": "Attribute 6 for Condition 2",
+                            "7": "Attribute 7 for Condition 2",
+                            "8": 1
+                        },
+                        {
+                            "0": 3,
+                            "1": "Attribute 1 for Condition 3",
+                            "2": "Attribute 2 for Condition 3",
+                            "3": "Attribute 3 for Condition 3",
+                            "4": "Attribute 4 for Condition 3",
+                            "5": "Attribute 5 for Condition 3",
+                            "6": "Attribute 6 for Condition 3",
+                            "7": "Attribute 7 for Condition 3",
+                            "8": 1
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 5,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 20,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INT8",
+                                    "SERIAL"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": true
+                        },
+                        {
+                            "title": "Attribute_1",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Attribute_2",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Attribute_3",
+                            "field": "3",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Attribute_4",
+                            "field": "4",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Attribute_5",
+                            "field": "5",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Attribute_6",
+                            "field": "6",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Attribute_7",
+                            "field": "7",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Inspection_id",
+                            "field": "8",
+                            "dataType": {
+                                "type": 5,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 20,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INT8",
+                                    "SERIAL"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 3 records retrieved in 1.396ms"
+                    },
+                    "totalRowCount": 3,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM `condition` WHERE Inspection_id = 1",
+                    "updatable": true,
+                    "fullTableName": "`condition`"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 250,
+                "end": 250,
                 "language": "mysql",
                 "currentSet": 1,
                 "statements": [

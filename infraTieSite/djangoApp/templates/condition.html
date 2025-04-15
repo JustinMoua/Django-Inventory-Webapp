@@ -1,4 +1,17 @@
 {% extends "base.html" %} 
+{% comment %} 
+* Filename: condition.html
+* Author: Justin Moua 
+* 
+* NOTES: This is the conditions page. It extends base.html. It fetches the Conditions table via a 
+* foreign key which matches up with the unique key ids in the Inspection tables. 
+* The row that was selected from Inspection Tables is shown alongside with all the 
+* values from the Condition table that matches the foreign key.
+*
+*
+{% endcomment %}
+
+
 <script
   src="https://code.jquery.com/jquery-3.7.1.js"
   integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -9,6 +22,7 @@
 <div>
     <h3 class="float-md-start mb-0">Logged in as {{request.user.username}} </h3>
     <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="{% url 'inspection' %}">Go Back to Inspection Page</a>
         <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="{% url 'logout' %}">Log Out</a>
     </nav>
   </div>
@@ -27,12 +41,49 @@
 
 
     {% comment %} Here we create a table with the following bootstrap utils {% endcomment %}
-    <table class="table table-bordered table-hover table-sm w-75 mx-auto" >
+    <table class="table table-bordered table-hover table-sm w-75 mx-auto">
         {% comment %} thead = table head {% endcomment %}
         <thead>
             {% comment %} tr = table row (we want 8 rows, each that matches the attributes in inspection){% endcomment %}
             <tr>
                 <th scope="col">InspectionID</th>
+                <th scope="col">Attribute 1</th>
+                <th scope="col">Attribute 2</th>
+                <th scope="col">Attribute 3</th>
+                <th scope="col">Attribute 4</th>
+                <th scope="col">Attribute 5</th>
+                <th scope="col">Attribute 6</th>
+                <th scope="col">Attribute 7</th>
+            </tr>
+        </thead>
+        {% comment %}tbody = table body (these are the information we are reading from the database) {% endcomment %}
+        <tbody>
+            <tr> {% comment %} makes every link clickable. Goes to page "conditions" when clicked{% endcomment %}
+                {% for inspection in inspections %} 
+                <td>{{ inspection.id }}</td>
+                <td>{{ inspection.Attribute_1 }}</td>
+                <td>{{ inspection.Attribute_2 }}</td>
+                <td>{{ inspection.Attribute_3 }}</td>
+                <td>{{ inspection.Attribute_4 }}</td>
+                <td>{{ inspection.Attribute_5 }}</td>
+                <td>{{ inspection.Attribute_6 }}</td>
+                <td>{{ inspection.Attribute_7 }}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+
+    
+
+    {% comment %} 
+    ======================================CONDITIONS TABLE=====================
+    Here we create a table with the following bootstrap utils {% endcomment %}
+    <table class="table table-bordered table-hover table-sm w-75 mx-auto" >
+        {% comment %} thead = table head {% endcomment %}
+        <thead>
+            {% comment %} tr = table row (we want 8 rows, each that matches the attributes in inspection){% endcomment %}
+            <tr>
+                <th scope="col">ConditionID</th>
                 <th scope="col">Attribute 1</th>
                 <th scope="col">Attribute 2</th>
                 <th scope="col">Attribute 3</th>

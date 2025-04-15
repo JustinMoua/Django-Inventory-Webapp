@@ -2,12 +2,15 @@
 * Filename: index.html
 * Author: Justin Moua
 * 
-* Notes:
+* NOTES:
 * This is the file that is called first. When the login button is clicked, it tries to go to the
 * loginView via action="{% url 'loginView'%}" which is located in ifnraTie/infraTieSite/djangoApp/views.py.
 * There, we have an else statement checking if the login is valid or not. If not, 
 * the user is returned (or really, they stay in the same place) to the login/homepage.
 * 
+* Code for logging in can be founded near the end of this .html file.
+*
+*
 {% endcomment %}
 {% load static %}
 
@@ -172,20 +175,31 @@
     {% comment %}
         use POST method to send sensitive data.
         login is our view.
+
+        We use a form to take in the user's username and password. This should be passed when "log in" is clicked
+
     {% endcomment %}
     <form method="POST" action="{% url 'loginView'%}"> {% comment %}  action="{% url 'HomePageView' %}" {% endcomment %}
         {% csrf_token %}
         {{ form.as_p }}
         
+        {% comment %} This is the user's username. We place the input div inside so that "username" appears to the left of it. {% endcomment %}
         <p class="usernameTextField">
              Username: <input type="text" name="username" required> {% comment %} views.py uses the name="username" here to grab the username! {% endcomment %}
         </p>
 
+        {% comment %} Similar situation above for the input div below of the password. {% endcomment %}
         <p class="passwordTextField">
             Password: <input type="password" name="password" required>
         </p>
 
-        <p class="lead">
+        {% comment %} 
+        "lead" is a bootstrap utility function. 
+        https://getbootstrap.com/docs/5.3/content/typography/#lead
+        bootstrap docs says that "This is a lead paragraph. It stands out from regular paragraphs"
+        {% endcomment %}
+        <p class="lead"> 
+          {% comment %} some of the items in class="btn btn-lg ..." are bootstrap utilities. {% endcomment %}
             <button type="submit" class="btn btn-lg btn-light fw-bold border-white bg-white">Log In</button>
         </p>
     </form>

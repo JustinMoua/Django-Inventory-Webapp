@@ -1,4 +1,15 @@
 {% extends "base.html" %}
+{% comment %} 
+* Filename: inspection.html
+* Author: Justin Moua
+* 
+* NOTES:
+* This is the "homepage" where the user can see a list of the entire inspection table.
+*
+*
+{% endcomment %}
+
+
 <script
   src="https://code.jquery.com/jquery-3.7.1.js"
   integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -6,7 +17,14 @@
 
 {% block header %} 
 <div>
-    <h3 class="float-md-start mb-0">    {% if request.user.is_authenticated %}
+    {% comment %} Display the username of whoever is logged in. {% endcomment %}
+    <h3 class="float-md-start mb-0">    
+    
+    {%comment%}
+    Checks if user is actually logged in (via authentication) 
+    https://docs.djangoproject.com/en/5.2/topics/auth/default/#authentication-in-web-requests
+    {%endcomment%}
+    {% if request.user.is_authenticated %} 
         Logged in as {{ request.user.username }}
     {% else %}
         Not logged in
@@ -50,7 +68,7 @@ tr[data-href]{
         {% comment %}tbody = table body (these are the information we are reading from the database) {% endcomment %}
         <tbody>
             {% for inspection in inspections %} {% comment %} for loop to look in the inspection table {% endcomment %}
-            <tr data-href="inspection"> {% comment %} makes every link clickable. Goes to page "conditions" when clicked{% endcomment %}
+            <tr data-href="{% url 'conditionView' inspection.id %}"> {% comment %} makes every link clickable. Goes to page "conditions" when clicked{% endcomment %}
                 <th scope="row">{{ forloop.counter }}</th>
                 <td>{{ inspection.Attribute_1 }}</td>
                 <td>{{ inspection.Attribute_2 }}</td>
@@ -63,7 +81,7 @@ tr[data-href]{
             {% endfor %}
         </tbody>
     </table>
-
+    <p class="">inspections</p>
     <script> 
         //script dom that listens to when you click. This guide was helpful https://youtu.be/6BdKUO2QbA0?si=LTHoDT5UAAmZ4FBc 
         //Need to use jquery to fetch the data
@@ -79,15 +97,6 @@ tr[data-href]{
                 });
             });
         });
-
-        $(function (){
-            $(document).on("click", "tr[data-href]", function() {
-                var id = $(this).closest('tr').attr('id');
-                console.log("id is:"+id);
-              });
-        });
-
-        console.log()
     </script>
 </body>
 {% endblock %}
