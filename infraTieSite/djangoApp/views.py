@@ -1,14 +1,27 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .models import Inspection #import of Inspection class from models.py
+from .models import Condition, Inspection #import of Inspection class from models.py
 from .forms import LoginForm #import of LoginForm class from forms.py
 # Create your views here.
 
-def inspection_view(request):
+@login_required(login_url='loginView')  #https://docs.djangoproject.com/en/5.2/topics/auth/default/#django.contrib.auth.decorators.login_required
+def inspectionView(request):
     # Query all rows from the Inspection table
     inspections = Inspection.objects.all()
+    # "inspections" is used in inspection.html in this for loop --> {% for inspection in inspections %}
     return render(request, "inspection.html", {"inspections": inspections})
+
+@login_required(login_url='loginView')
+def conditionView(request, id):
+    print("id is:", id)
+    conditions = Condition.objects.all()
+    return render(request, "condition.html", {"conditions": conditions})
+
+# def inspectionView(request):
+#     rows = Inspection.objects.all()
+#     return render(request, "inspection.html", {"inspection": rows })
 
 def baseView(request):
     return render(request, 'base.html')
@@ -37,11 +50,8 @@ def loginView(request):
         form = LoginForm()
         return redirect('HomePageView')  # If someone visits the login view directly
 
-def inspectionView(request):
-    rows = Inspection.objects.all()
-    return render(request, "inspection.html", {"inspection": rows })
-
 # logout page
-def user_logout(request):
+def logoutView(request):
     logout(request)
+    messages.success(request, "You have been logged out successfully.")
     return redirect('HomePageView') #Login Page

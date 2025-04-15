@@ -4,10 +4,17 @@
   integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
   crossorigin="anonymous"></script>
 
-{% block header %}
+{% block header %} 
 <div>
-    <h3 class="float-md-start mb-0">Justin Moua</h3>
-</div>
+    <h3 class="float-md-start mb-0">    {% if request.user.is_authenticated %}
+        Logged in as {{ request.user.username }}
+    {% else %}
+        Not logged in
+    {% endif %}</h3>
+    <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="{% url 'logout' %}">Log Out</a>
+    </nav>
+  </div>
 {% endblock %}
 
 {%block style%}
@@ -17,12 +24,15 @@ tr[data-href]{
 }
 {%endblock%}
 
+{%block customStyle%}
+{%endblock%}
+
 {% block main %}
 {% comment %} Editing main dom {% endcomment %}
 
 <body>
     {% comment %} Here we create a table with the following bootstrap utils {% endcomment %}
-    <table class="table table-bordered table-hover table-sm w-75 mx-auto" >
+    <table class="table table-bordered table-hover table-sm w-75 mx-auto">
         {% comment %} thead = table head {% endcomment %}
         <thead>
             {% comment %} tr = table row (we want 8 rows, each that matches the attributes in inspection){% endcomment %}
@@ -40,7 +50,7 @@ tr[data-href]{
         {% comment %}tbody = table body (these are the information we are reading from the database) {% endcomment %}
         <tbody>
             {% for inspection in inspections %} {% comment %} for loop to look in the inspection table {% endcomment %}
-            <tr data-href="condition"> {% comment %} makes every link clickable. Planning to make this so it goes to another page called "conditions" {% endcomment %}
+            <tr data-href="inspection"> {% comment %} makes every link clickable. Goes to page "conditions" when clicked{% endcomment %}
                 <th scope="row">{{ forloop.counter }}</th>
                 <td>{{ inspection.Attribute_1 }}</td>
                 <td>{{ inspection.Attribute_2 }}</td>
@@ -57,9 +67,11 @@ tr[data-href]{
     <script> 
         //script dom that listens to when you click. This guide was helpful https://youtu.be/6BdKUO2QbA0?si=LTHoDT5UAAmZ4FBc 
         //Need to use jquery to fetch the data
+
+        //addEventListener https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
         document.addEventListener("DOMContentLoaded", () => {
             const rows = document.querySelectorAll("tr[data-href]");
-            //console.log(rows);
+            console.log(rows);
 
             rows.forEach(row=>{
                 row.addEventListener("click", () =>{
@@ -74,6 +86,11 @@ tr[data-href]{
                 console.log("id is:"+id);
               });
         });
+
+        console.log()
     </script>
 </body>
 {% endblock %}
+
+{%block footer%}
+{%endblock%}
