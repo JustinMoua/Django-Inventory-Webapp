@@ -1,3 +1,38 @@
+'''
+* Filename: models.py
+* Author: InfraTie
+* Edited by: Justin Moua
+* 
+* NOTES:
+* 
+*  
+* The following models (or classes) are:
+*   - Inspection(models.Model) 
+*       - Subclasses models.model
+*       - Contains the following attributes/columns:
+*           - Unique ID (already set by MySQL)
+*           - Attribute_1
+*           - Attribute_2
+*           - Attribute_3
+*           - Attribute_4
+*           - Attribute_5
+*           - Attribute_6
+*           - Attribute_7
+*
+*   - Condition(models.Model)
+*       - Subclasses models.model
+*       - Uses foreign key from inspection model
+*       - Contains the following attributes/columns:
+*           - Unique ID (already set by MySQL)
+*           - Attribute_1
+*           - Attribute_2
+*           - Attribute_3
+*           - Attribute_4
+*           - Attribute_5
+*           - Attribute_6
+*           - Attribute_7
+* 
+'''
 from django.db import models
 
 class Inspection(models.Model):

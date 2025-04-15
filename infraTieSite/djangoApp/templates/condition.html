@@ -15,9 +15,63 @@
 <script
   src="https://code.jquery.com/jquery-3.7.1.js"
   integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous">
+</script>
   
-<h1>Conditions</h1>
+{%block style%}
+{% comment %} Editing style block in base.html to make arrow turn to cursor. {% endcomment %}
+tr[data-href]{
+    cursor: pointer
+}
+
+{% comment %} ================== Custom CSS styles I made for tables starts here ============== {% endcomment %}
+.myTables {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 0.65em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    float: left; {% comment %} aligns table with class name myTables to the very left. {% endcomment %}
+  }
+
+  .myTables thead tr{
+    background-color:rgb(255, 168, 8);
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+
+  }
+
+  .myTables th,
+  .myTables td{
+    padding: 12px 15px;
+
+  }
+
+  .myTables tbody tr{
+    border-bottom: 1px solid #dddddd;
+
+  }
+  .myTables tbody tr:nth-of-type(odd){
+    background-color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+  }
+  .myTables tbody tr:nth-of-type(even){
+    background-color: rgb(255, 166, 0);
+    color:rgb(0, 0, 0);
+  }
+
+  .myTables tbody tr:last-of-type{
+    border-bottom: 2px solid #FFA500;
+  }
+
+  .tableFooterText{
+    text-align: left;
+    }
+{% comment %} ================== Custom CSS styles I made for tables starts here ============== {% endcomment %}
+{%endblock%}
+
 {%block header%}
 <div>
     <h3 class="float-md-start mb-0">Logged in as {{request.user.username}} </h3>
@@ -30,6 +84,7 @@
 
 {% block main %}
 <body>
+    <p>Conditions</p>
 
     {% if messages %}
     <ul>
@@ -40,8 +95,12 @@
     {% endif %}
 
 
-    {% comment %} Here we create a table with the following bootstrap utils {% endcomment %}
-    <table class="table table-bordered table-hover table-sm w-75 mx-auto">
+    {% comment %} 
+    ======================================INSPECTOINS TABLE=====================
+    Here we create a table with the following bootstrap utils 
+    {% endcomment %}
+    <div class="table-responsive"> {% comment %} table-responsive is a bootstrap util that allows for scrollable tables. https://getbootstrap.com/docs/4.0/content/tables/ {%endcomment%}
+    <table class="myTables table-bordered table-hover table-sm w-75 mx-auto">
         {% comment %} thead = table head {% endcomment %}
         <thead>
             {% comment %} tr = table row (we want 8 rows, each that matches the attributes in inspection){% endcomment %}
@@ -72,13 +131,22 @@
             {%endfor%}
         </tbody>
     </table>
+    </div>
+    <p class = "tableFooterText">
+        Inspection: 
+        {%for inspection in inspections%}
+        {{inspection.id}}
+        {%endfor%}
+    </p>
 
     
 
     {% comment %} 
     ======================================CONDITIONS TABLE=====================
-    Here we create a table with the following bootstrap utils {% endcomment %}
-    <table class="table table-bordered table-hover table-sm w-75 mx-auto" >
+    Here we create a table with the following bootstrap utils 
+    {% endcomment %}
+    <div class="table-responsive">
+    <table class="myTables table-bordered table-hover table-sm w-75 mx-auto" >
         {% comment %} thead = table head {% endcomment %}
         <thead>
             {% comment %} tr = table row (we want 8 rows, each that matches the attributes in inspection){% endcomment %}
@@ -109,5 +177,12 @@
             {% endfor %}
         </tbody>
     </table>
+    </div>
+    <p class = "tableFooterText">
+        Conditions for Inspection: 
+        {%for inspection in inspections%}
+        {{inspection.id}}
+        {%endfor%}
+    </p>
 </body>
 {%endblock%}

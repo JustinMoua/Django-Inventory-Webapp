@@ -13,7 +13,72 @@
 <script
   src="https://code.jquery.com/jquery-3.7.1.js"
   integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous">
+</script>
+
+{%block style%}
+{% comment %} Editing style block in base.html to make arrow turn to cursor. {% endcomment %}
+tr[data-href]{
+    cursor: pointer
+}
+
+.inspectionTable {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.85em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+
+}
+
+.inspectionTable thead tr{
+    background-color:rgb(255, 166, 0);
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+
+}
+
+.inspectionTable th,
+.inspectionTable td{
+    padding: 12px 15px;
+
+}
+
+.inspectionTable tbody tr{
+    border-bottom: 1px solid #dddddd;
+
+}
+.inspectionTable tbody tr:nth-of-type(odd){
+    background-color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+}
+.inspectionTable tbody tr:nth-of-type(even){
+    background-color: rgb(255, 201, 102);
+    color:rgb(0, 0, 0);
+}
+
+.inspectionTable tbody tr:last-of-type{
+    border-bottom: 2px solid #FFA500;
+}
+
+
+.inspectionTable tr[data-href]:hover {
+    background-color:rgb(143, 115, 115);
+}
+.inspectionTable td {
+    font-size: 10px;
+}
+
+.inspectionTable th[scope="col"] {
+    font-size: 15px;
+}
+
+.inspectionText{
+    text-align: left;
+}
+{%endblock%}
 
 {% block header %} 
 <div>
@@ -35,22 +100,14 @@
   </div>
 {% endblock %}
 
-{%block style%}
-{% comment %} Editing style block in base.html to make arrow turn to cursor. {% endcomment %}
-tr[data-href]{
-    cursor: pointer
-}
-{%endblock%}
-
-{%block customStyle%}
-{%endblock%}
-
 {% block main %}
 {% comment %} Editing main dom {% endcomment %}
 
 <body>
+    <h1> Homepage </h1>
+    <div class="table-responsive">
     {% comment %} Here we create a table with the following bootstrap utils {% endcomment %}
-    <table class="table table-bordered table-hover table-sm w-75 mx-auto">
+    <table class="inspectionTable table-bordered table-hover table-sm w-75 mx-auto">
         {% comment %} thead = table head {% endcomment %}
         <thead>
             {% comment %} tr = table row (we want 8 rows, each that matches the attributes in inspection){% endcomment %}
@@ -81,7 +138,8 @@ tr[data-href]{
             {% endfor %}
         </tbody>
     </table>
-    <p class="">inspections</p>
+    </div>
+    <p class="inspectionText">inspections</p>
     <script> 
         //script dom that listens to when you click. This guide was helpful https://youtu.be/6BdKUO2QbA0?si=LTHoDT5UAAmZ4FBc 
         //Need to use jquery to fetch the data
