@@ -10,10 +10,6 @@ The application includes:
 
 ---
 
-## 🌟 Demo  
-
----
-
 ## 🔨 Tech Stack  
 - **Backend:** Django (Python)  
 - **Frontend:** Bootstrap, jQuery  
