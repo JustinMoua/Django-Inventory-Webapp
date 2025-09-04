@@ -1,4 +1,4 @@
-# 📝 Inspection Management Demo App  
+# 📝 Django-Inventory-Webapp 
 
 ## 📖 Overview  
 This is a demo project built with **Django**, **Bootstrap**, and **jQuery**. It was created as part of a coding challenge to showcase full-stack development skills.  
