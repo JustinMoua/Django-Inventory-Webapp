@@ -1,3 +1,39 @@
-# Demo Project Description
+# 📝 Inspection Management Demo App  
 
-This is a Django application that utilizes bootstrap and jquery. This short project consists of three pages which are a log-in page, a home-page, and an conditions page. The home-page fetches and displays data in a tabular format via MySQL from a table called Inspections. It's unique ids are used as a foreign key in another table called conditions. When a row is clicked on in the home-page, the user is redirected to the conditions page. This page displays the row corresponding to the inspection table that the user previously selected along with the rows whose foreign key matches the unique id of the inspection row that was selected.
+## 📖 Overview  
+This is a demo project built with **Django**, **Bootstrap**, and **jQuery**. It was created as part of a coding challenge to showcase full-stack development skills.  
+
+The application includes:  
+- A **login page** for authentication  
+- A **homepage** that fetches and displays inspection data from a MySQL database in a tabular format  
+- A **conditions page** that displays details related to the selected inspection  
+
+---
+
+## 🌟 Demo  
+
+---
+
+## 🔨 Tech Stack  
+- **Backend:** Django (Python)  
+- **Frontend:** Bootstrap, jQuery  
+- **Database:** MySQL  
+
+---
+
+## 🚀 Features  
+- User login system  
+- Tabular display of inspection data  
+- Relational data handling:  
+  - The `Inspections` table has unique IDs  
+  - These IDs serve as foreign keys in the `Conditions` table  
+- Clicking a row on the homepage redirects to a detailed conditions page  
+
+---
+
+## 📚 Learning Highlights  
+Through this project, I gained experience in:  
+- Building Django apps with Bootstrap for styling  
+- Implementing relational database models with MySQL  
+- Handling user interaction and page redirection with jQuery  
+- Designing a small-scale, functional CRUD-style workflow  
